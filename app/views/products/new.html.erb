@@ -1,0 +1,17 @@
+<%= form_for @product, url: products_path, method: :post do |f| %>
+
+<div class="container">
+<div class="col-md-12">
+
+    <%= f.label :販売会社名 %><br />
+    <%= collection_check_boxes(:product, :store_ids, Store.all, :id, :store_name) do |b| %>
+      <%= b.label { b.check_box + b.text } %>
+    <% end %>
+
+	<div><%= f.label :商品名 %></div>
+	40文字以内にしてください
+	<%= f.text_field :product_name, placeholder: "  商品名", :size => "80%" %>
+	<%=f.submit '送信！', class: 'btn btn-primary btn-lg btn-block' %>
+
+<%end%>
+

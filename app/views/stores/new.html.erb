@@ -1,0 +1,12 @@
+<%= form_for @store, url: stores_path, method: :post do |f| %>
+
+<div class="container">
+	<div class="col-md-12">
+		<div><%= f.label :販売会社 %></div>
+			<%= f.text_area :store_name, placeholder: "販売会社" %>
+			<%= f.text_field :country, value: "日本" %>
+		<%=f.submit '送信！', class: 'btn btn-primary btn-lg btn-block' %>
+	</div>
+</div>
+<%end%>
+

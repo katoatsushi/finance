@@ -1,0 +1,16 @@
+.store_main_box{
+	border: 3px solid #FF6600;
+	background-color: #FFC299;
+	border-radius: 4px 4px 4px 4px;
+	text-align: center;
+	color:#FF6600;
+	padding: 0.3em 1.0em;
+	font-weight: 900;
+	font-size: 3em;
+}
+.store_main_box .store_box_in_store_main_box{
+	display:inline; 
+	font-weight: 900; 
+	font-size: 1.2em; 
+	color: black;
+}

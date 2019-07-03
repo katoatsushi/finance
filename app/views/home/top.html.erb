@@ -1,0 +1,101 @@
+<div class="intro">
+	「rIsk&rEturn」は日本最大級の投資信託ポータルサイトです<br>「rIsk&rEturn」では、証券の方から信託商品に対するリスク・リターンのご意見を数多く揃えています。
+</div>
+<hr>
+<div class="search_title">
+		検 索
+</div>
+<hr>
+<div class="useful_box">
+	<div class="d-flex align-items-center justify-content-center">
+	<div class="d-sm-inline-flex " >
+		<div class="box_product">
+			<h3>商品で探す</h3>
+			<div class="inner">
+				<%= form_tag(home_searched_products_path, method: :get) do %>
+				    <%= text_field_tag :search_product,'', size: 40 , placeholder: '商品名を入力してください' %>
+					<%= submit_tag '探　す', name: nil ,class: "btn btn-primary" %>
+				<% end %>
+			</div> 
+		</div>
+		<div class="box_store">
+			<h3>販売先名で探す</h3>
+			<div class="inner">
+				<%= form_tag(home_searched_stores_path, method: :get) do %>
+				    <%= text_field_tag :search_store,'', size: 40 , placeholder: '販売店名を入力してください' %>
+					<%= submit_tag '探　す', name: nil ,class: "btn btn-primary" %>
+				<% end %>
+			</div> 
+		</div>
+	</div>
+</div>
+</div>
+<div>
+	<%= link_to '販売店追加', new_store_path,  class: "btn btn-primary"%>
+	<%= link_to '商品追加', new_product_path,  class: "btn btn-primary"%>
+</div>
+<hr>
+<div class="titles">
+	<h3 style="color:red; font-weight: 600; display:inline; font-size: 1.2em; ">リスク</h3>と<h3 style="color: #00AA00; font-weight: 600;  display:inline;font-size: 1.2em; ">リターン</h3>一覧
+</div>
+<hr>
+<div class="useful_box">
+	<div class="row">
+		<% @products.each do |p| %>
+			<div class="col-md-3">
+				<div class="card" style="margin:1em 0; ">
+					<h5 class="card-header d-flex align-items-center" style=" text-align: center; background-color: #006666; color: #FFFACD; font-size: 1.3em;" ><%= p.product_name %></h5>
+					<div class="card-body">
+					    <p class="risk" >リスク</p>
+					    <p class="card-text">販売名を入力してください販売名を入力してくださいあああああああああああああああああ</p>
+					    <p class="return">リターン</p>
+					    <p class="card-text">販売名を入力してください販売名を入力してくださいあああああああああああああああああ</p>
+					</div>
+					<div class="card-footer text-muted" style="text-align: right;">
+		    			<%=link_to  "この商品の詳細", product_path(p.id) ,class: "btn btn-primary" %>
+		  			</div>
+				</div>
+			</div>
+		<% end %>
+	</div>
+</div>
+
+<hr>
+<div class="titles">
+	<h3 style="color: #FF9900; display:inline; font-size: 1.3em; font-weight: 600;">商品一覧</h3>
+</div>
+<hr>
+<div class="useful_box">
+	<!-- <div class="products_box"> -->
+	<% @products.each do |p| %>
+		<span class="product_line">
+			<%=link_to  "#{p.product_name}", product_path(p.id) %>
+		</span>
+	<% end %>
+	<!-- </div> -->
+</div>
+
+<hr>
+<div class="titles">
+	<h3 style="color: #FF6600; display:inline; font-size: 1.3em; font-weight: 600;">販売店一覧</h3>
+</div>
+<hr>
+<div class="useful_box">
+	<div class="row">
+		<% @stores.each do |s| %>
+			<div class="col-md-3 col-xs-push-3 ">
+				<%= link_to store_path(s.id) do %>
+					<div class="store_box d-flex align-items-center justify-content-center">
+						<p id="store_box"><%= s.store_name %></p>
+						<!-- <h4 id="store_box_contry"><%= s.country %></h4> -->
+					</div>
+				<% end %>
+			</div>
+		<% end %>
+	</div>
+</div>
+<div class="footer_box">
+	<div class="form_tag">
+		お問い合わせ
+	</div>
+</div>

@@ -1,0 +1,157 @@
+.search_box {
+	background-color: white;
+	margin: 1em 0;
+	padding: 0.5em 1em;
+	border: solid 5px;
+	border-color: #e2e0e0;
+	text-align: center;
+	border-radius: 10px 10px 10px 10px;
+	width: 100%;
+	display: flex;
+
+}
+.use_color{
+/*	#FF9900  #FFE0B3
+	#FF6600  #FFC299*/
+}
+.container{
+	background-color: white;
+}
+.background{background-color:#FFFFCC;}
+
+.intro{
+	background-color:#FFFFCC;
+	text-align: center;
+	margin: 0;
+	padding: 1em  5em ;
+}
+
+.search_box h3{
+	color: #58594f;
+	text-align: center;
+	font-size: 2em;
+	font-weight: 800;
+}
+
+.title_box_product {
+	background-color: #FF9900;
+	font-weight: 200;
+	text-align: center;
+	color: #FFF5E6;
+	font-size: 1.7em;
+	padding: 0em 0em;
+	border-top: solid 3px;
+}
+
+.title_box_store {
+	background-color: #FF6600;
+	font-weight: 200;
+	text-align: center;
+	color: #FFF0E6;
+	font-size: 1.7em;
+	padding: 0em 0em;
+	border-top: solid 3px;
+}
+
+
+.search_title_box {
+	background-color: #000080;
+	font-weight: 700;
+	text-align: center;
+	display: inline-block;
+	width: auto;
+	border-color: #000066;
+	color: #FFFFCC;
+	font-size: 1.7em;
+	width: 50%;
+	padding: 0em 0em;
+	margin: 0.3em 0em;
+	border-top: solid 2px;
+
+}
+
+
+p.risk {
+   border-bottom: 2px solid red; 
+   text-align: center;
+   font-weight: 600;
+   font-size: 1.2em;
+}
+p.return {
+   border-bottom: 2px solid #33CC00;
+   text-align: center;
+   font-weight: 600;
+   font-size: 1.2em;
+}
+
+.box_risk{
+  border: 2px solid #FF9900;
+  margin: 10px;
+}
+.box_risk h3{
+  color: #FF9900;
+  text-align: center;
+  margin: .2em auto;
+  border-bottom: 2px solid #FF9900;
+  background: #FFE0B3;
+  margin:0;
+  padding: .2em 0;
+}
+.box_risk .inner{
+  padding: .5em 1.5em;
+  background-color: #CCCCCC;
+}
+
+
+
+.box_product{
+  border: 2px solid #FF9900;
+  margin: 10px;
+}
+.box_product h3{
+  color: #FF9900;
+  text-align: center;
+  margin: .2em auto;
+  border-bottom: 2px solid #FF9900;
+  background: #FFE0B3;
+  margin:0;
+  padding: .2em 0;
+}
+.box_product .inner{
+  padding: .5em 1.5em;
+  /*background-color: #CCCCCC;*/
+
+}
+
+.box_store{
+  border: 2px solid #FF6600;
+  margin: 10px;
+}
+.box_store h3{
+  color: #FF6600;
+  text-align: center;
+  margin: .2em auto;
+  border-bottom: 2px solid #FF6600;
+  background: #FFC299;
+  margin:0;
+  padding: .2em 0;
+}
+.box_store .inner{
+  padding: .5em 1.5em;
+  /*background-color: #CCCCCC;*/
+}
+
+.d-sm-inline-flex {
+	border: solid 3px;
+	margin :10px 30px;
+	/*background-color:#EEEEEE;*/
+}
+.search_title{
+	text-align: center;
+	color:#555555;
+	font-weight:900;
+	font-size: 35px;
+
+}
+
+

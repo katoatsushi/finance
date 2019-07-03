@@ -1,0 +1,45 @@
+<div class="product_main_box">
+	<div class="product_box_in_product_main_box">
+		商品名：
+	</div>
+	<%= @product.product_name %>
+</div>
+<%= link_to 'アドバイスを追加', new_product_advise_path(product_id: params[:id]), class: "btn btn-primary" %>
+
+<div class="useful_box" style="margin-bottom: 1em;">
+	<h2 style="text-align: center;">この商品を売っている販売店一覧</h2><hr>
+	<div class="row">
+		<% @stores.each do |s| %>
+			<div class="col-md-3 col-xs-push-3 ">
+				<%= link_to store_path(s.id) do %>
+					<div class="store_box_mini d-flex align-items-center justify-content-center">
+						<p id="store_box_mini"><%= s.store_name %></p>
+					</div>
+				<% end %>
+			</div>
+		<% end %>
+	</div>
+</div>
+<div class="useful_box">
+	<h2 style="text-align: center;">専門家の方々の意見</h2>
+	<hr>
+	<div class="row">
+		<% @advises.each do |a| %>
+			<div class="col-md-6">
+				<div class="advise_box">
+					<i class="fa fa-user fa-3x"></i>
+					kkokokokk
+					<hr>
+					<div class="demerit">リスク</div>
+					<div class="risk_box">
+						メンバーの名前はあだ名とかがいいよーー！！とかがなかったら本名になってしまうので、何か要望があればここのチャンネルにお願いします！<%= a.merit %>
+					</div>
+					<div class="merit">リターン</div>
+					<div class="return_box">
+						メンバーの名前はあだ名とかがいいよーー！！とかがなかったら本名になってしまうので、何か要望があればここのチャンネルにお願いします！<%= a.demerit %>
+					</div>
+				</div>
+			</div>
+		<% end %>
+	</div>
+</div>

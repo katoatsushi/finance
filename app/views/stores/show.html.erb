@@ -1,0 +1,21 @@
+
+	<div class="store_main_box">
+		<div class="store_box_in_store_main_box">
+			販売店：
+		</div>
+		<%= @store.store_name %>
+	</div>
+	<h2 style="text-align: center;
+	margin-top: 5px;">この販売店が売っている商品一覧</h2>
+	<hr>
+	<h4 style="text-align: center;
+	margin-top: 5px; color: grey;">※クリックすることで商品の詳細・アドバイスを見ることができます</h4>
+	<div class="title_box_product">商品一覧</div>
+		<div class="products_box">
+			<% @products.each do |p| %>
+				<span class="product_line">
+					<%=link_to  "#{p.product_name}", product_path(p.id) %>
+				</span>
+			<% end %>
+		</div>
+	<div>

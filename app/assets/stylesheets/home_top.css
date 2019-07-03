@@ -1,0 +1,45 @@
+.titles{
+	text-align: center;
+	margin-top: 5px;
+	font-weight: 900; 
+	text-shadow: 2px 1.5px 3px rgba(0,0,0,0.5);
+	font-size: 2em;
+}
+
+.useful_box{
+	background-color: white; 
+	/*margin: 1em 1em; */
+	/*margin-top: 50px;*/
+	padding: 2em 1em;
+}
+
+.header_box {
+	background: linear-gradient(-135deg,  #EEEEEE,#FF9900);
+	padding: 1.5em 3em;
+	margin: 0 0 0em 0;
+}
+
+.header_box h2{
+	font-weight: 900;
+	font-size: 2.3em;
+	color: #222222;
+	text-shadow: 1px 1px 2px silver;
+}
+
+
+
+.footer_box {
+	background: #FF9900;
+	padding: 3em 3em;
+	margin-bottom: 0;
+}
+
+.f_tags{
+	font-weight: 900;
+	font-size: 1.0em;
+	color: #222222;
+	text-align: right;
+	margin-bottom: 0;
+}
+
+

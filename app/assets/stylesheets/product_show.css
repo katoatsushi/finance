@@ -1,0 +1,70 @@
+.advise_box{
+	/*background-color: #EEFFFF;*/
+	border-radius: 4px 4px 4px 4px;
+	/*border: 1px solid #99FFFF;*/
+	box-shadow:0px 0px 3px 1px #B4C9CC;
+	padding: 10px 5px;
+	margin: 1em 1em;
+}
+.advise_box .merit{
+	font-weight: 900;
+	font-style: 25px;
+	margin-bottom: 1em;
+	text-align: center;
+}
+.advise_box .demerit{
+	font-weight: 900;
+	font-style: 25px;
+	margin-bottom: 1em;
+	text-align: center;
+}
+.advise_box .advise_detail_box{
+	margin: 0.2em 1em;
+	color:#333333;
+}
+.advise_box .risk_box{
+	background-color: #FFE6F4;
+/*	background-color: #FFD5EC;*/
+	border-radius: 4px 4px 4px 4px;
+	border: 1px solid #FF367F;
+	box-shadow:0px 0px 3px 1px #B4C9CC;
+	padding: 5px 6px;
+	margin-bottom: 5px;
+}
+
+.advise_box .return_box{
+	background-color: #E6FFE9;
+	border-radius: 4px 4px 4px 4px;
+	border: 1px solid #00FF3B;
+	box-shadow:0px 0px 3px 1px #B4C9CC;
+	padding: 5px 6px;
+}
+
+.product_main_box{
+	border: 3px solid #00BFBF;
+	background-color: #006666;
+	border-radius: 4px 4px 4px 4px;
+	text-align: center;
+	color:#fffacd;
+	padding: 0.3em 1.0em;
+	font-weight: 900;
+	font-size: 3em;
+}
+.product_main_box .product_box_in_product_main_box{
+	display:inline; 
+	font-weight: 900; 
+	font-size: 1.2em; 
+	color: #00BFBF;
+}
+
+.stores_item{
+	border: 2px solid #33CCFF;
+	background-color: #CCFFFF;
+	color: #666666;
+	font-size: 20px;
+	font-weight: 900;
+	border-radius: 4px 4px 4px 4px;
+	text-align: center;
+	padding: 3px 3px;
+	margin :2px 2px;
+}

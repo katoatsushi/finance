@@ -1,0 +1,6 @@
+<div class="container">
+	<h2>検査キーワード:<%= @search_key_words %></h2>
+	<% @searched_stores.each do |store| %>
+		<div><%= store.store_name %></div>
+	<% end %>
+</div>

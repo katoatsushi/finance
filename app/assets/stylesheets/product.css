@@ -1,0 +1,45 @@
+.product_line {
+	padding: 0.1em 0.1em;
+	margin: 0.1em 0.1em;
+	font-size: 1.2em;
+	color: #EEEEEE;
+	width: auto;
+	border-radius: 10px 10px 10px 10px;
+	background-color: #008080;
+	border: solid 3px;
+	border-color: #00BCD4;
+	display: inline-block;
+}
+.product_line a:link {
+	color:#EEEEEE;
+	text-decoration:none;
+}
+.product_line a:hover {
+	color: white;
+	text-decoration:none;
+	background-color: #066666;
+	font-weight: 500;
+}
+.product_line a:visited {
+	color: white;
+	text-decoration:none;
+	background-color: #066666;
+}
+
+.products_box{
+	padding: 0.3em 0.5em;
+	border-radius: 13px 13px 13px 13px;
+	box-shadow: 0 2px 10px rgba(0.05, 0.05, 0.05, 0.2);
+}
+
+.card-header{
+	display: grid;
+	background-color: #00BCD4; 
+	display: block;
+	justify-content: center;
+	align-items: center;
+	color: #EEEEEE; 
+	height: 120px; 
+	font-size: 18px; 
+}
+
