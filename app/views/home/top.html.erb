@@ -66,13 +66,11 @@
 </div>
 <hr>
 <div class="useful_box">
-	<!-- <div class="products_box"> -->
 	<% @products.each do |p| %>
 		<span class="product_line">
 			<%=link_to  "#{p.product_name}", product_path(p.id) %>
 		</span>
 	<% end %>
-	<!-- </div> -->
 </div>
 
 <hr>
