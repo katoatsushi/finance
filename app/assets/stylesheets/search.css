@@ -71,7 +71,7 @@
 }
 
 
-p.risk {
+/*p.risk {
    border-bottom: 2px solid red; 
    text-align: center;
    font-weight: 600;
@@ -82,7 +82,7 @@ p.return {
    text-align: center;
    font-weight: 600;
    font-size: 1.2em;
-}
+}*/
 
 .box_risk{
   border: 2px solid #FF9900;
@@ -106,6 +106,7 @@ p.return {
 
 .box_product{
   border: 2px solid #FF9900;
+/*  #FFB84D*/
   margin: 10px;
 }
 .box_product h3{

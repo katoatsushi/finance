@@ -1,99 +1,70 @@
+<div class="header_box_top">
+	<div class="d-flex bd-highlight mb-3">
+		<%= link_to "リスクとリターン", root_path, class: "app_name mr-auto p-2 bd-highlight" %>
+	  	<div class="flexiblebox signed_up">新規登録</div>
+	  	<div class="flexiblebox signed_in">ログイン</div>
+	</div>
+	<div class="flexiblebox search_main_box">
+		<div class="search_title">商品名または販売店名で探す</div>
+		<div class="search_input_box">
+			<%= form_tag(home_searched_products_path, method: :get ,style: "display: inline;") do%>
+				<%= text_field_tag :search_product,'', size: 80 , placeholder: '例）〇〇ファンド' %>
+				<div style="display:inline"><%= submit_tag '検索', name: nil ,class: "btn btn-secondary", style: " width: 15%;text-align: center;" %></div>
+			<% end %>
+		</div>
+		<div class="row" style="text-align: left;">
+			<div class="col-sm-2"></div>
+			<div class="col-sm-4">
+				<%= link_to "・ニッセイJPX日経400インデックスファンド", root_path ,class: "obj_link" %>
+				<%= link_to "・ニッセイJリートオープン", root_path ,class: "obj_link" %>
+				<%= link_to "・のむラップ・ファンド", root_path ,class: "obj_link" %>
+			</div>
+			<div class="col-sm-4">
+				<%= link_to "・楽天証券", root_path ,class: "obj_link" %>
+				<%= link_to "・東海東京証券", root_path ,class: "obj_link" %>
+				<%= link_to "・十六ＴＴ証券株式会社", root_path ,class: "obj_link" %>
+			</div>
+		</div>
+	</div>
+</div>
 <div class="intro">
-	「rIsk&rEturn」は日本最大級の投資信託ポータルサイトです<br>「rIsk&rEturn」では、証券の方から信託商品に対するリスク・リターンのご意見を数多く揃えています。
+	リスクとリターンは投資信託の商品に対し、その商品を買うことのリスクとリターンをまとめたポータルサイトです。
 </div>
-<hr>
-<div class="search_title">
-		検 索
-</div>
-<hr>
-<div class="useful_box">
-	<div class="d-flex align-items-center justify-content-center">
-	<div class="d-sm-inline-flex " >
-		<div class="box_product">
-			<h3>商品で探す</h3>
-			<div class="inner">
-				<%= form_tag(home_searched_products_path, method: :get) do %>
-				    <%= text_field_tag :search_product,'', size: 40 , placeholder: '商品名を入力してください' %>
-					<%= submit_tag '探　す', name: nil ,class: "btn btn-primary" %>
-				<% end %>
-			</div> 
+
+<div class="row">
+	<div class="col-sm-1"></div>
+	<div class="col-sm-3" style="margin-top: 10px;">
+		<div class="products_side_box">
+			<div class="product_header"> 商品一覧</div>
+			<% @products.each do |p| %>
+				<ul>
+					<li><%=link_to "#{p.product_name}",class: "font_color" %></li>
+				</ul>
+			<% end %>
 		</div>
-		<div class="box_store">
-			<h3>販売先名で探す</h3>
-			<div class="inner">
-				<%= form_tag(home_searched_stores_path, method: :get) do %>
-				    <%= text_field_tag :search_store,'', size: 40 , placeholder: '販売店名を入力してください' %>
-					<%= submit_tag '探　す', name: nil ,class: "btn btn-primary" %>
-				<% end %>
-			</div> 
+		<div class="stores_side_box">
+			<div class="store_header"> 販売店一覧</div>
+			<% @stores.each do |s| %>
+				<ul>
+					<li><%=link_to "#{s.store_name}",class: "font_color" %></li>
+				</ul>
+			<% end %>
 		</div>
 	</div>
-</div>
-</div>
-<div>
-	<%= link_to '販売店追加', new_store_path,  class: "btn btn-primary"%>
-	<%= link_to '商品追加', new_product_path,  class: "btn btn-primary"%>
-</div>
-<hr>
-<div class="titles">
-	<h3 style="color:red; font-weight: 600; display:inline; font-size: 1.2em; ">リスク</h3>と<h3 style="color: #00AA00; font-weight: 600;  display:inline;font-size: 1.2em; ">リターン</h3>一覧
-</div>
-<hr>
-<div class="useful_box">
-	<div class="row">
+	<div class="col-sm-6">
 		<% @products.each do |p| %>
-			<div class="col-md-3">
-				<div class="card" style="margin:1em 0; ">
-					<h5 class="card-header d-flex align-items-center" style=" text-align: center; background-color: #006666; color: #FFFACD; font-size: 1.3em;" ><%= p.product_name %></h5>
-					<div class="card-body">
-					    <p class="risk" >リスク</p>
-					    <p class="card-text">販売名を入力してください販売名を入力してくださいあああああああああああああああああ</p>
-					    <p class="return">リターン</p>
-					    <p class="card-text">販売名を入力してください販売名を入力してくださいあああああああああああああああああ</p>
-					</div>
-					<div class="card-footer text-muted" style="text-align: right;">
-		    			<%=link_to  "この商品の詳細", product_path(p.id) ,class: "btn btn-primary" %>
-		  			</div>
-				</div>
-			</div>
-		<% end %>
+		<div class="card">
+			<div class="card-header" style="background-color: #1564B3;"></div>
+	      	<div class="card-body">
+				<h5 class="card-title" style="text-align: center; font-size: 1.8em;"><%= p.product_name %></h5>
+				<p style="text-align: center;">リターン</p>
+				<p class="riturn card-text">With supporting text below as a natural lead-in to additional content.With supporting text below as a natural lead-in to additional content.With supporting text below as a natural lead-in to additional content.</p>
+				<p style="text-align: center;">リスク</p>
+	        	<p class="risk card-text">With supporting text below as a natural lead-in to additional conteWith supporting text below as a natural lead-in to additional content.With supporting text below as a natural lead-in to additional content.nt.</p>
+				<%=link_to  "さらに見る", product_path(p.id) ,class: "btn btn-outline-primary btn-block" %>
+	      	</div>
+    	</div>
+    	<% end %>
 	</div>
-</div>
-
-<hr>
-<div class="titles">
-	<h3 style="color: #FF9900; display:inline; font-size: 1.3em; font-weight: 600;">商品一覧</h3>
-</div>
-<hr>
-<div class="useful_box">
-	<% @products.each do |p| %>
-		<span class="product_line">
-			<%=link_to  "#{p.product_name}", product_path(p.id) %>
-		</span>
-	<% end %>
-</div>
-
-<hr>
-<div class="titles">
-	<h3 style="color: #FF6600; display:inline; font-size: 1.3em; font-weight: 600;">販売店一覧</h3>
-</div>
-<hr>
-<div class="useful_box">
-	<div class="row">
-		<% @stores.each do |s| %>
-			<div class="col-md-3 col-xs-push-3 ">
-				<%= link_to store_path(s.id) do %>
-					<div class="store_box d-flex align-items-center justify-content-center">
-						<p id="store_box"><%= s.store_name %></p>
-						<!-- <h4 id="store_box_contry"><%= s.country %></h4> -->
-					</div>
-				<% end %>
-			</div>
-		<% end %>
+	<div class="col-sm-1"></div>
 	</div>
-</div>
-<div class="footer_box">
-	<div class="form_tag">
-		お問い合わせ
-	</div>
-</div>

@@ -1,13 +1,13 @@
 .product_line {
-	padding: 0.1em 0.1em;
+	padding: 0.2em 0.2em;
 	margin: 0.1em 0.1em;
 	font-size: 1.2em;
-	color: #EEEEEE;
+	color: white;
 	width: auto;
-	border-radius: 10px 10px 10px 10px;
-	background-color: #008080;
-	border: solid 3px;
-	border-color: #00BCD4;
+/*	border-radius: 10px 10px 10px 10px;*/
+	background-color: #FF9900;
+	border: solid 1px;
+	border-color: #FFC266;
 	display: inline-block;
 }
 .product_line a:link {
@@ -17,7 +17,7 @@
 .product_line a:hover {
 	color: white;
 	text-decoration:none;
-	background-color: #066666;
+/*	background-color: #066666;*/
 	font-weight: 500;
 }
 .product_line a:visited {

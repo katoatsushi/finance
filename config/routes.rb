@@ -2,7 +2,6 @@ Rails.application.routes.draw do
 
   get 'home/index'
   root 'home#top'
-
   resources :stores 
 
    resources :stores, only: [ :show ] do

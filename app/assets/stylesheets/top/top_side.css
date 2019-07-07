@@ -1,0 +1,35 @@
+.products_side_box{
+	border: 0.1px solid;
+	padding-left: 0;
+	background-color: white;
+}
+.products_side_box .product_header{
+	background-color: #1564B3;
+	color: white;
+	font-size: 1.3em;
+	font-weight: 700;
+	text-align: center;
+	margin-bottom: 10px;
+	padding-top: 8px;
+	padding-bottom:  8px;
+
+}
+.product_font_color{
+	color: #00ECFF;
+}
+
+.stores_side_box{
+	border: 0.1px solid;
+	padding-left: 0;
+	background-color: white;
+}
+.stores_side_box .store_header{
+	background-color: #1564B3;
+	color: white;
+	font-size: 1.3em;
+	font-weight: 700;
+	text-align: center;
+	margin-bottom: 10px;
+	padding-top: 8px;
+	padding-bottom:  8px;
+}

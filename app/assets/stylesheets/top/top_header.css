@@ -1,0 +1,81 @@
+.header_box_top {
+	background-color: #1564B3;
+	width: 100%;
+	padding: 10px;
+}
+.app_name{
+	color: white;
+	font-size: 2.0em;
+	font-weight: 900;
+}
+.app_name:hover{
+	color: silver;
+	font-size: 2.0em;
+	font-weight: 900;
+}
+
+.flexiblebox {
+ 	display: -webkit-flex;
+ 	display: flex;
+ 	-webkit-align-items: center; 
+ 	align-items: center; 
+ 	-webkit-justify-content: center; 
+ 	justify-content: center; 
+}
+
+
+input {
+	width: 80%;
+	height: 2.5em;
+}
+
+.signed_up{
+	width: 13%;
+	text-align: center;
+	margin:0.5em;
+	height: 30px; 	
+  	font-size: 14px;
+	background-color: #FF8C00;
+	color: white;
+
+}
+.signed_in{
+	width: 13%;
+	text-align: center;
+	margin: 0.5em;
+	padding: 0; 
+	height: 30px; 	
+  	font-size: 14px;
+	background-color: #0099FF;
+	color: white;	
+	
+}
+
+.obj_link{
+	color: white;
+	font-weight: 800;
+	display: block;
+	text-decoration: underline
+}
+.search_main_box {
+	text-align: center;
+	background-color: #4383C2;
+	width: 90%;
+	padding: 10px;
+	margin: auto;
+	display: block;
+}
+.search_title {
+	color: #FFFFEE;
+	text-align: center;
+	margin-bottom: 20px;
+	font-size: 25px;
+}
+.search_input_box {
+	background-color: #3399FF;
+	margin:auto;
+	padding: 10px;
+	text-align: center;
+	width: 90%;
+	margin-bottom: 10px;
+}

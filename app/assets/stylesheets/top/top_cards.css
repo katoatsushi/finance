@@ -1,0 +1,30 @@
+.card{
+	/* height: 400px; */
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border-radius: 0;
+}
+
+.card-body{
+	/*border-top: solid 5px #5989cf;*/
+	border-radius: 0;
+}
+.card-header{
+	height: 2px;
+	margin: 0;
+	padding: 0;
+}
+
+/*リターン　#EEFFFF #CCFFFF
+リスク	#FFEEFF	#FFCCFF*/
+
+.riturn{
+	background-color: #EEFFFF;
+	border: 0.5px dotted grey;
+	padding: 4px;
+}
+.risk{
+	background-color: #FFEEFF;
+	border: 0.5px dotted grey;
+	padding: 4px;
+}
