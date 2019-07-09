@@ -2,6 +2,8 @@
 
 <div class="container">
 <div class="col-md-12">
+	<div><%= f.label :投稿人情報 %></div>
+		<%= f.text_field :user_name, value: "20代 / 女性 / 元社員(非正社員) / 企画・事務・管理系 / 株式会社KDDIエボ" %>
 	<div><%= f.label :メリット %></div>
 		<%= f.text_area :merit, placeholder: "商品名" %>
 	<div><%= f.label :デメリット %></div>

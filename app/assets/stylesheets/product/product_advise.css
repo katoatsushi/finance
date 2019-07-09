@@ -1,0 +1,111 @@
+.advise_main_box{
+	border: 0.5px solid black;
+	margin-top: 10px;
+	background-color: white;
+	padding: 10px 15px;
+}
+
+.advise_main_box .risk_box{
+	background-color: white;
+}
+
+
+.advise_main_box .return_box{
+	background-color: white;
+}
+
+
+
+.balloon-set-box {
+  display: flex;
+  flex-wrap: wrap;
+}
+.balloon-set-box.left { 
+  flex-direction: row;
+}
+.balloon-set-box.right { 
+  flex-direction: row-reverse; 
+}
+.balloon {
+  position: relative; 
+  display: inline-block;
+  max-width: 80%;
+  margin: 10px 20px 20px; 
+  padding: 8px 15px; 
+  background: #FFEEFF;
+  text-align: left; 
+  border-radius: 15px;
+}
+.balloon::after {
+  content: '';
+  border: 14px solid transparent;
+  border-top-color: #FFEEFF;
+  position: absolute;
+  top: 0;
+}
+.left .balloon::after { 
+  left: -10px;
+}
+.right .balloon::after { 
+  right: -10px;
+}
+ 
+/*.icon-box {
+  width: 300px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: 0 0 6px rgba(0,0,0,0.3);
+  overflow: hidden;
+}
+*/
+
+
+.balloon-set-box {
+  display: flex;
+  flex-wrap: wrap;
+}
+.balloon-set-box.left {
+  flex-direction: row;
+}
+.balloon-set-box.right { 
+  flex-direction: row-reverse; 
+}
+.balloon2 {
+  position: relative; 
+  display: inline-block;
+  max-width: 80%;
+  margin: 10px 20px 20px;
+  padding: 8px 15px;
+  background: #EEFFFF; 
+  text-align: left; 
+  border-radius: 15px;
+}
+.balloon2::after {
+  content: '';
+  border: 14px solid transparent;
+  border-top-color: #EEFFFF;
+  position: absolute;
+  top: 0;
+}
+.left .balloon2::after { 
+  left: -10px;
+}
+.right .balloon2::after { 
+  right: -10px;
+}
+ 
+.icon-box {
+  width: 80px;
+  height: 80px;
+  /*border-radius: 10%;*/
+  border: 2px solid #fff;
+/*  box-shadow: 0 0 6px rgba(0,0,0,0.3);*/
+  border: 0.1px solid black;
+  /*overflow: hidden;*/
+}
+
+.grey{
+	color: grey;
+}
+

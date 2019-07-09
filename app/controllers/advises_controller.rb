@@ -28,6 +28,6 @@ class AdvisesController < ApplicationController
 
   private
     def advise_params
-      params.require(:advise).permit(:merit,:demerit,:product_id)
+      params.require(:advise).permit(:merit,:demerit,:user_name,:product_id)
     end
 end

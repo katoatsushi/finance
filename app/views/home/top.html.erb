@@ -1,8 +1,13 @@
+<div class="background">
 <div class="header_box_top">
 	<div class="d-flex bd-highlight mb-3">
 		<%= link_to "リスクとリターン", root_path, class: "app_name mr-auto p-2 bd-highlight" %>
-	  	<div class="flexiblebox signed_up">新規登録</div>
-	  	<div class="flexiblebox signed_in">ログイン</div>
+		<% if user_signed_in? %>
+		<%=link_to 'ログアウト',destroy_user_session_path, method: :delete, class: "flexiblebox signed_in" %>
+		<% else %>
+		<%= link_to "新規登録",  new_user_registration_path,method: :get, class: "flexiblebox signed_up" %>
+		<%= link_to "ログイン",  new_user_session_path, method: :get, class: "flexiblebox signed_in" %>
+		<% end %>
 	</div>
 	<div class="flexiblebox search_main_box">
 		<div class="search_title">商品名または販売店名で探す</div>
@@ -30,7 +35,8 @@
 <div class="intro">
 	リスクとリターンは投資信託の商品に対し、その商品を買うことのリスクとリターンをまとめたポータルサイトです。
 </div>
-
+	<%= link_to '販売店追加', new_store_path,  class: "btn btn-primary"%>
+	<%= link_to '商品追加', new_product_path,  class: "btn btn-primary"%>
 <div class="row">
 	<div class="col-sm-1"></div>
 	<div class="col-sm-3" style="margin-top: 10px;">
@@ -67,4 +73,5 @@
     	<% end %>
 	</div>
 	<div class="col-sm-1"></div>
+	</div>
 	</div>
