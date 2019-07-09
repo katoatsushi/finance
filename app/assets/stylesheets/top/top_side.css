@@ -1,4 +1,5 @@
 .products_side_box{
+	word-break : break-all;
 	border: 0.1px solid;
 	padding-left: 0;
 	background-color: white;
@@ -19,6 +20,7 @@
 }
 
 .stores_side_box{
+	word-break : break-all;
 	border: 0.1px solid;
 	padding-left: 0;
 	background-color: white;
