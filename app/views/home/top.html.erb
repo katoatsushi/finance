@@ -63,10 +63,7 @@
 			<div class="card-header" style="background-color: #1564B3;"></div>
 	      	<div class="card-body">
 				<h5 class="card-title" style="text-align: center; font-size: 1.8em;"><%= p.product_name %></h5>
-<!-- 				<p style="text-align: center;">リターン</p>
-				<p class="riturn card-text"><%= p.advises.first.merit %></p>
-				<p style="text-align: center;">リスク</p>
-	        	<p class="risk card-text"><%= p.advises.first.demerit %></p> -->
+
 				<%=link_to  "さらに見る", product_path(p.id) ,class: "btn btn-outline-primary btn-block" %>
 	      	</div>
     	</div>
