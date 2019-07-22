@@ -9,6 +9,10 @@
 		<%= link_to "ログイン",  new_user_session_path, method: :get, class: "flexiblebox signed_in" %>
 		<% end %>
 	</div>
+	<div class="introduction_of_app">
+		<p id="introduction_of_app">ああああああああああああああああああリスクとリターンは投資信託の商品に対し、その商品を買うことのリスクとリターンをまとめたポータルサイトです。金融商品〇〇〇ってどうなの？？
+		</p>
+	</div>
 	<div class="flexiblebox search_main_box">
 		<div class="search_title">商品名または販売店名で探す</div>
 		<div class="search_input_box">
@@ -17,27 +21,42 @@
 				<div style="display:inline"><%= submit_tag '検索', name: nil ,class: "btn btn-secondary", style: " width: 15%;text-align: center;" %></div>
 			<% end %>
 		</div>
-		<div class="row" style="text-align: left;">
-			<div class="col-sm-2"></div>
-			<div class="col-sm-4">
-				<%= link_to "・ニッセイJPX日経400インデックスファンド", root_path ,class: "obj_link" %>
-				<%= link_to "・ニッセイJリートオープン", root_path ,class: "obj_link" %>
-				<%= link_to "・のむラップ・ファンド", root_path ,class: "obj_link" %>
-			</div>
-			<div class="col-sm-4">
-				<%= link_to "・楽天証券", root_path ,class: "obj_link" %>
-				<%= link_to "・東海東京証券", root_path ,class: "obj_link" %>
-				<%= link_to "・十六ＴＴ証券株式会社", root_path ,class: "obj_link" %>
-			</div>
-		</div>
 	</div>
 </div>
-<div class="intro">
-	リスクとリターンは投資信託の商品に対し、その商品を買うことのリスクとリターンをまとめたポータルサイトです。
+<div class="introduction_of_app">
+	<p id="introduction_of_app">
+	ああああああああああああああああああリスクとリターンは投資信託の商品に対し、
+	その商品を買うことのリスクとリターンをまとめたポータルサイトです。
+	金融商品〇〇〇ってどうなの？？</p>
 </div>
 	<%= link_to '販売店追加', new_store_path,  class: "btn btn-primary"%>
 	<%= link_to '商品追加', new_product_path,  class: "btn btn-primary"%>
+
+
+
 <div class="row">
+	<div class="col-sm-2"></div>
+	<div class="col-sm-8">
+	<div class="products_side_box">
+		<% @stores.each do |s| %>
+			<div class="product_header"><%= s.store_name %></div>
+			<% s.products.each do |p| %>
+			<ul>
+				<li><%= p.product_name %></li>
+			</ul>
+			<% end %>
+		<% end %>
+	</div>
+</div>
+	<div class="col-sm-2"></div>
+</div>
+
+
+
+
+
+
+<!-- <div class="row">
 	<div class="col-sm-1"></div>
 	<div class="col-sm-3" style="margin-top: 10px;">
 		<div class="products_side_box">
@@ -63,12 +82,11 @@
 			<div class="card-header" style="background-color: #1564B3;"></div>
 	      	<div class="card-body">
 				<h5 class="card-title" style="text-align: center; font-size: 1.8em;"><%= p.product_name %></h5>
-
 				<%=link_to  "さらに見る", product_path(p.id) ,class: "btn btn-outline-primary btn-block" %>
 	      	</div>
     	</div>
     	<% end %>
 	</div>
 	<div class="col-sm-1"></div>
-	</div>
-	</div>
+</div> -->
+</div>
