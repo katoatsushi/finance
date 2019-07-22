@@ -37,56 +37,18 @@
 <div class="row">
 	<div class="col-sm-2"></div>
 	<div class="col-sm-8">
-	<div class="products_side_box">
-		<% @stores.each do |s| %>
-			<div class="product_header"><%= s.store_name %></div>
-			<% s.products.each do |p| %>
-			<ul>
-				<li><%= p.product_name %></li>
-			</ul>
+		<div class="products_side_box">
+			<% @stores.each do |s| %>
+				<div class="product_header"><%= s.store_name %></div>
+				<% s.products.each do |p| %>
+				<ul>
+					<li><%= p.product_name %></li>
+				</ul>
+				<% end %>
 			<% end %>
-		<% end %>
+		</div>
 	</div>
-</div>
 	<div class="col-sm-2"></div>
 </div>
 
-
-
-
-
-
-<div class="row">
-	<div class="col-sm-1"></div>
-	<div class="col-sm-3" style="margin-top: 10px;">
-		<div class="products_side_box">
-			<div class="product_header"> 商品一覧</div>
-			<% @products.each do |p| %>
-				<ul>
-					<li><%=link_to "#{p.product_name}",class: "font_color" %></li>
-				</ul>
-			<% end %>
-		</div>
-		<div class="stores_side_box">
-			<div class="store_header"> 販売店一覧</div>
-			<% @stores.each do |s| %>
-				<ul>
-					<li><%=link_to "#{s.store_name}",class: "font_color" %></li>
-				</ul>
-			<% end %>
-		</div>
-	</div>
-	<div class="col-sm-6">
-		<% @products.each do |p| %>
-		<div class="card">
-			<div class="card-header" style="background-color: #1564B3;"></div>
-	      	<div class="card-body">
-				<h5 class="card-title" style="text-align: center; font-size: 1.8em;"><%= p.product_name %></h5>
-				<%=link_to  "さらに見る", product_path(p.id) ,class: "btn btn-outline-primary btn-block" %>
-	      	</div>
-    	</div>
-    	<% end %>
-	</div>
-	<div class="col-sm-1"></div>
-</div>
 </div>
