@@ -42,7 +42,7 @@
 				<div class="product_header"><%= s.store_name %></div>
 				<% s.products.each do |p| %>
 				<ul>
-					<li><%= p.product_name %></li>
+					<li><%= link_to "#{p.product_name}", store_product_path(store_id: s.id, id: p.id), method: :get %></li>
 				</ul>
 				<% end %>
 			<% end %>
