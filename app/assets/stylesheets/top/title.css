@@ -1,0 +1,20 @@
+h1#title{
+  padding: 0.25em 0.5em;/*上下 左右の余白*/
+  color: #494949;/*文字色*/
+  background: transparent;/*背景透明に*/
+  border-left: solid 5px #7db4e6;/*左線*/
+  font-size: 2em;
+}
+p#title{
+	font-size:18px;
+	font-weight: 500;
+	color:#808080;
+}
+
+.title_box{
+	background-color: white;
+	padding: 10px 50px;
+	margin: 20px 100px;
+    box-shadow:0px 0px 3px 2px rgba(0, 0, 0, 0.2) inset;
+    border:0.5px solid #000;
+}
