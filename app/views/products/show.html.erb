@@ -19,7 +19,7 @@
 	</div>
 </div>
 
-
+<div class="background">
 <div class="product_main_box">
 	<%= @product.product_name %><br>
 	<div class="st_box">販売店一覧</div>
@@ -30,28 +30,35 @@
 </div>
 <%= link_to 'アドバイスを追加', new_product_advise_path(product_id: params[:id]), class: "btn btn-primary" %>
 
-<% @advises.each do |a| %>
-<div class="advise_main_box">
-	<div style="text-align: center; color: grey;">投稿者：<%= a.user_name %></div>
-	<hr>
-	<div style="text-align: center; font-weight: 700;">リスク</div>
-	<div>
-	<div class="balloon-set-box left">
+<div class="row">
+	<div class="col-sm-1"></div>
+	<div class="col-sm-10">
+		<% @advises.each do |a| %>
+		<div class="advise_main_box">
+			<div style="text-align: center; color: grey;">投稿者：<%= a.user_name %></div>
+			<hr>
+			<div style="text-align: center; font-weight: 700;">リスク</div>
+			<div>
+			<div class="balloon-set-box left">
 
-		<i class="fa fa-user fa-3x grey"></i>
-		<div class="balloon">
-			<%= a.merit %>
+				<i class="fa fa-user fa-3x grey"></i>
+				<div class="balloon">
+					<%= a.merit %>
+				</div>
+			</div>
+			</div>
+			<div style="text-align: center; font-weight: 700;">リターン</div>
+			<div>
+			<div class="balloon-set-box left">
+				<i class="fa fa-user fa-3x grey"></i>
+				<div class="balloon2">
+					<%= a.demerit %>
+				</div>
+			</div>
+			</div>
 		</div>
+		<% end %>
 	</div>
-	</div>
-	<div style="text-align: center; font-weight: 700;">リターン</div>
-	<div>
-	<div class="balloon-set-box left">
-		<i class="fa fa-user fa-3x grey"></i>
-		<div class="balloon2">
-			<%= a.demerit %>
-		</div>
-	</div>
-	</div>
+	<div class="col-sm-1"></div>
 </div>
-<% end %>
+</div>

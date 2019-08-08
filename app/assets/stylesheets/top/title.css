@@ -4,6 +4,7 @@ h1#title{
   background: transparent;/*背景透明に*/
   border-left: solid 5px #7db4e6;/*左線*/
   font-size: 2em;
+  font-weight: 800;
 }
 p#title{
 	font-size:18px;

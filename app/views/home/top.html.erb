@@ -1,7 +1,7 @@
 <div class="background">
 <div class="header_box_top">
 	<div class="d-flex bd-highlight mb-3">
-		<%= link_to "リスクとリターン", root_path, class: "app_name mr-auto p-2 bd-highlight" %>
+		<%= link_to "この投信", root_path, class: "app_name mr-auto p-2 bd-highlight" %>
 		<% if user_signed_in? %>
 		<%=link_to 'ログアウト',destroy_user_session_path, method: :delete, class: "flexiblebox signed_in" %>
 		<% else %>
