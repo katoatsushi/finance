@@ -3,11 +3,11 @@
 <div class="container">
 <div class="col-md-12">
 	<div><%= f.label :投稿人情報 %></div>
-		<%= f.text_field :user_name, value: "20代 / 女性 / 元社員(非正社員) / 企画・事務・管理系 / 株式会社KDDIエボ" %>
+		<%= f.text_field :user_name, value: "30代 / 男性 / 元社員(非正社員) / 営業 " %>
 	<div><%= f.label :メリット %></div>
-		<%= f.text_area :merit, placeholder: "商品名" %>
+		<%= f.text_area :merit, placeholder: "メリットを書いてください" , style: "width: 80%; height: 300px;"%>
 	<div><%= f.label :デメリット %></div>
-		<%= f.text_area :demerit, placeholder: "商品名"%>
+		<%= f.text_area :demerit, placeholder: "デメリットを書いてください" , style: "width: 80%; height: 300px;"%>
 	<%=f.submit '送信！', class: 'btn btn-primary btn-lg btn-block' %>
 </div>
 </div>
