@@ -1,7 +1,7 @@
 <div class="background">
 <div class="header_box_top">
 	<div class="d-flex bd-highlight mb-3">
-		<%= link_to "この投信", root_path, class: "app_name mr-auto p-2 bd-highlight" %>
+		<%= link_to "この投信とは。", root_path, class: "app_name mr-auto p-2 bd-highlight" %>
 		<% if user_signed_in? %>
 		<%=link_to 'ログアウト',destroy_user_session_path, method: :delete, class: "flexiblebox signed_in" %>
 		<% else %>
@@ -21,20 +21,20 @@
 </div>
 
 <div class="title_box">
-<h1 id="title">この投信とは</h1>
-<hr>
-<p id="title">
-このサイトは、
-「この投資信託って何が要因で上がったり（儲かったり）下がったり（損したり）するんだろ？」
-という投資信託の初歩的な質問を中立的な立場でコメントするサイトです。
-投資信託を推奨したりするサイトではないですが今後の投資信託の運用の際の一つの指針になればと思います
-</p>
+	<h1 id="title">この投信とは。</h1>
+	<hr>
+	<p id="title">
+	このサイトは、「この投資信託って何が要因で上がったり（儲かったり）下がったり（損したり）するんだろ？」
+	という投資信託の初歩的な質問を中立的な立場でコメントするサイトです。
+	投資信託を推奨したりするサイトではないですが今後の投資信託の運用の際の一つの指針になればと思います。
+	</p>
 </div>
 
 	<%= link_to '販売店追加', new_store_path,  class: "btn btn-primary"%>
 	<%= link_to '商品追加', new_product_path,  class: "btn btn-primary"%>
 
-
+<div class="slide_show_box">
+</div>
 
 <div class="row">
 	<div class="col-sm-2"></div>
