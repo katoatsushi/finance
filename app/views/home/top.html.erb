@@ -1,56 +1,41 @@
-<div class="background">
-<div class="header_box_top">
-	<div class="d-flex bd-highlight mb-3">
-		<%= link_to "この投信とは。", root_path, class: "app_name mr-auto p-2 bd-highlight" %>
-		<% if user_signed_in? %>
-		<%=link_to 'ログアウト',destroy_user_session_path, method: :delete, class: "flexiblebox signed_in" %>
-		<% else %>
-		<%= link_to "新規登録",  new_user_registration_path,method: :get, class: "flexiblebox signed_up" %>
-		<%= link_to "ログイン",  new_user_session_path, method: :get, class: "flexiblebox signed_in" %>
+<%= image_tag '/header.png', width: "100%" %>
+
+<div class="flexiblebox search_main_box">
+	<div class="search_title">商品名または販売店名で探す</div>
+	<div class="search_input_box">
+		<%= form_tag(home_searched_products_path, method: :get ,style: "display: inline;") do%>
+			<%= text_field_tag :search_product,'', size: 80 , placeholder: '例）〇〇ファンド' %>
+			<div style="display:inline"><%= submit_tag '検索', name: nil ,class: "btn btn-secondary", style: " width: 15%;text-align: center;" %>
+			</div>
 		<% end %>
 	</div>
-	<div class="flexiblebox search_main_box">
-		<div class="search_title">商品名または販売店名で探す</div>
-		<div class="search_input_box">
-			<%= form_tag(home_searched_products_path, method: :get ,style: "display: inline;") do%>
-				<%= text_field_tag :search_product,'', size: 80 , placeholder: '例）〇〇ファンド' %>
-				<div style="display:inline"><%= submit_tag '検索', name: nil ,class: "btn btn-secondary", style: " width: 15%;text-align: center;" %></div>
-			<% end %>
-		</div>
-	</div>
 </div>
 
-<div class="title_box">
-	<h1 id="title">この投信とは。</h1>
-	<hr>
-	<p id="title">
-	このサイトは、「この投資信託って何が要因で上がったり（儲かったり）下がったり（損したり）するんだろ？」
-	という投資信託の初歩的な質問を中立的な立場でコメントするサイトです。
-	投資信託を推奨したりするサイトではないですが今後の投資信託の運用の際の一つの指針になればと思います。
-	</p>
-</div>
+<%= link_to '販売店追加', new_store_path,  class: "btn btn-primary"%>
+<%= link_to '商品追加', new_product_path,  class: "btn btn-primary"%>
 
-	<%= link_to '販売店追加', new_store_path,  class: "btn btn-primary"%>
-	<%= link_to '商品追加', new_product_path,  class: "btn btn-primary"%>
-
-<div class="slide_show_box">
-</div>
-
+<div class="container-fluid">
 <div class="row">
-	<div class="col-sm-2"></div>
-	<div class="col-sm-8">
-		<div class="products_side_box">
-			<% @stores.each do |s| %>
-				<div class="product_header"><%= s.store_name %></div>
-				<% s.products.each do |p| %>
-				<ul>
-					<li><%= link_to "#{p.product_name}", store_product_path(store_id: s.id, id: p.id), method: :get %></li>
-				</ul>
-				<% end %>
+	<div class="col-sm-6 col-md-9">
+		<p>新着コメント</p>
+		<div class="row">
+			<% @products.each do |p| %>
+			<div class="col-sm-12 col-md-4 advise_card">
+				<div class="card_inner">
+				<%= p.product_name %>
+				</div>
+			</div>
 			<% end %>
 		</div>
 	</div>
-	<div class="col-sm-2"></div>
-</div>
-
+	<div class="col-sm-6 col-md-3 side">
+		<p style="text-align: center;">販売会社</p><hr>
+		<div class="row">
+			<% @stores.each do |s| %>
+			<div class="col-sm-6 col-md-6 center">
+				<%= s.store_name %>
+			</div>
+			<% end %>
+		</div>
+	</div>
 </div>

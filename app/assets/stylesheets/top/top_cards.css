@@ -28,3 +28,16 @@
 	border: 0.5px dotted grey;
 	padding: 4px;
 }
+
+.advise_card{
+
+}
+
+.card_inner{
+	border-radius: 20px;
+	border: 1px solid;
+	word-wrap: break-word;
+	height: 200px;
+	margin: 10px;
+	padding: 20px;
+}

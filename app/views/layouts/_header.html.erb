@@ -1,0 +1,33 @@
+<div class="row">
+    <%= image_tag '/nav-img.png' , width: "100%" %>
+</div>
+<!-- ヘッダー部分 -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <!-- navbar-light bg-lightで色を指定 -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="ナビゲーションの切替">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse yellow" id="navbar">
+            <ul class="navbar-nav w-100 nav-justified">  <!-- 均等にナビバーのメニューを置く -->
+                <li class="nav-item">
+                    <%= link_to 'ホーム', root_path, class: "nav-link", style: "font-weight: 900; font-size: 1.2em;" %>
+                </li>
+                <li class="nav-item">
+                    <%= link_to 'このサイトについて', root_path, class: "nav-link", style: "font-weight: 900; font-size: 1.2em;" %>
+                </li>
+                <li class="nav-item">
+                    <%= link_to '投資信託一覧', root_path, class: "nav-link", style: "font-weight: 900; font-size: 1.2em;" %>
+                </li>
+                <li class="nav-item">
+                    <%= link_to '販売会社一覧', root_path, class: "nav-link", style: "font-weight: 900; font-size: 1.2em;" %>
+                </li>
+                <li class="nav-item">
+                    <%= link_to '回答者募集', root_path, class: "nav-link", style: "font-weight: 900; font-size: 1.2em;" %>
+                </li>
+            </ul>
+        </div><!-- ./collapse navbar-collapse -->
+</nav>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
