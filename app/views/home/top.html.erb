@@ -15,27 +15,28 @@
 <%= link_to '商品追加', new_product_path,  class: "btn btn-primary"%>
 
 <div class="container-fluid">
-<div class="row">
-	<div class="col-xs-6 col-md-9">
-		<p>新着コメント</p>
-		<div class="row">
-			<% @products.each do |p| %>
-			<div class="col-xs-12 col-md-4 advise_card">
-				<div class="card_inner">
-				<%= p.product_name %>
+	<div class="row">
+		<div class="col-xs-6 col-md-9">
+			<p>新着コメント</p>
+			<div class="row">
+				<% @products.each do |p| %>
+				<div class="col-xs-12 col-md-4 advise_card">
+					<div class="card_inner">
+						<%= p.product_name %>
+					</div>
 				</div>
+				<% end %>
 			</div>
-			<% end %>
 		</div>
-	</div>
-	<div class="col-xs-6 col-md-3 side">
-		<p style="text-align: center;">販売会社</p><hr>
-		<div class="row">
-			<% @stores.each do |s| %>
-			<div class="col-xs-6 col-md-6 center">
-				<%= s.store_name %>
+		<div class="col-xs-6 col-md-3 side">
+			<p style="text-align: center;">販売会社</p><hr>
+			<div class="row">
+				<% @stores.each do |s| %>
+				<div class="col-xs-6 col-md-6 center">
+					<%= s.store_name %>
+				</div>
+				<% end %>
 			</div>
-			<% end %>
 		</div>
 	</div>
 </div>
