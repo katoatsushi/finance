@@ -1,34 +1,23 @@
-.product_main_box{
-	border: 0.5px solid black;
-	background-color: white;
-	margin-top: 20px;
-	/*border-radius: 4px 4px 4px 4px;*/
+.product_name_box{
 	text-align: center;
-	color: black;
-	padding: 0.3em 1.0em;
+	font-size: 1.3em;
+	font-weight: 800;
+}
+.product_link{
+	text-align: center;
+	color: grey;
+	font-size: 1.0em;
 	font-weight: 500;
-	font-size: 2.2em;
-	margin-bottom: 50px;
 }
-.product_main_box .store_of_product{
-	display:inline; 
-	font-weight: 300; 
-	font-size: 0.6em; 
-	background-color: #DDDDDD;
-	color: black;
-	padding: 5px 8px;
+.product_store_list{
+	text-align: center;
+	color: grey;
+	font-size: 1.2em;
+	font-weight: 700;	
 }
-
-.product_main_box .st_box{
-	display:inline; 
-	font-weight: 500; 
-	font-size: 0.65em; 
-	background-color: #AAAAAA;
-	color: black;
-	padding: 3px 5px;
-}
-
-.comment{
-	background-color: #FFFACD;
-	border: 1.5px solid black;
+.border-product{
+	border-bottom: 9px dotted #f45e5e;
+	margin-bottom: 30px;
+	margin-top: 30px; 
+	padding-bottom: 20px;
 }

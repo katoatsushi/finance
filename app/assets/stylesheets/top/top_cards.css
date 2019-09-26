@@ -18,16 +18,6 @@
 /*リターン　#EEFFFF #CCFFFF
 リスク	#FFEEFF	#FFCCFF*/
 
-.riturn{
-	background-color: #EEFFFF;
-	border: 0.5px dotted grey;
-	padding: 4px;
-}
-.risk{
-	background-color: #FFEEFF;
-	border: 0.5px dotted grey;
-	padding: 4px;
-}
 
 .advise_card{
 

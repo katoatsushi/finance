@@ -1,64 +1,68 @@
-<div class="header_box_top">
-	<div class="d-flex bd-highlight mb-3">
-		<%= link_to "この投信", root_path, class: "app_name mr-auto p-2 bd-highlight" %>
-		<% if user_signed_in? %>
-		<%=link_to 'ログアウト',destroy_user_session_path, method: :delete, class: "flexiblebox signed_in" %>
-		<% else %>
-		<%= link_to "新規登録",  new_user_registration_path,method: :get, class: "flexiblebox signed_up" %>
-		<%= link_to "ログイン",  new_user_session_path, method: :get, class: "flexiblebox signed_in" %>
-		<% end %>
-	</div>
-	<div class="flexiblebox search_main_box">
-		<div class="search_title">商品名または販売店名で探す</div>
-		<div class="search_input_box">
-			<%= form_tag(home_searched_products_path, method: :get ,style: "display: inline;") do%>
-				<%= text_field_tag :search_product,'', size: 80 , placeholder: '例）〇〇ファンド' %>
-				<div style="display:inline"><%= submit_tag '検索', name: nil ,class: "btn btn-secondary", style: " width: 15%;text-align: center;" %></div>
-			<% end %>
-		</div>
-	</div>
-</div>
-
-<div class="background">
-<div class="product_main_box">
-	<%= @product.product_name %><br>
-	<div class="st_box">販売店一覧</div>
-	<% @stores.each do |s| %>
-		<div class="store_of_product"><%= s.store_name %></div>
-	<% end %>
-	<i class="fa fa-comment fa-1x" style="color: #FFA500;"></i><%= @product.advises.count %>件
-</div>
-<%= link_to 'アドバイスを追加', new_product_advise_path(product_id: params[:id]), class: "btn btn-primary" %>
-
-<div class="row">
-	<div class="col-sm-1"></div>
-	<div class="col-sm-10">
-		<% @advises.each do |a| %>
-		<div class="advise_main_box">
-			<div style="text-align: center; color: grey;">投稿者：<%= a.user_name %></div>
+<div class="container">
+	<div class="row">
+		<div class="col-lg-2"></div>
+		<div class="col-lg-8 col-xs-12">
+			<div class="border-product">
+			<div class="product_name_box"><%= @product.product_name %></div>
+			<div class="product_link">
+				詳細はこちら<br>
+				<%#= @product.product_url %><br>
+				関連リンク<br>
+			</div>
 			<hr>
-			<div style="text-align: center; font-weight: 700;">リスク</div>
-			<div>
-			<div class="balloon-set-box left">
-
-				<i class="fa fa-user fa-3x grey"></i>
-				<div class="balloon">
-					<%= a.merit %>
-				</div>
-			</div>
-			</div>
-			<div style="text-align: center; font-weight: 700;">リターン</div>
-			<div>
-			<div class="balloon-set-box left">
-				<i class="fa fa-user fa-3x grey"></i>
-				<div class="balloon2">
-					<%= a.demerit %>
-				</div>
+			<div class="product_store_list">
+				販売会社<br>
+				<% @stores.each do |s| %>
+					<%= s.store_name %>/
+				<% end %>
 			</div>
 			</div>
 		</div>
-		<% end %>
+		<div class="col-lg-2"></div>
 	</div>
-	<div class="col-sm-1"></div>
 </div>
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-lg-10">
+			<div class="row">
+				<% @advises.each do |a| %>
+					<div class="col-lg-2">
+						<div class="row">
+							<div class="col-xs-4"></div>
+							<div class="col-xs-4" style="text-align: center;">
+								<%= image_tag '/hito.png', width: "60%" %>
+							</div>
+							<div class="col-xs-4"></div>		
+							<div class="user_name"><%= a.user_name %></div>
+						</div>
+					</div>
+					<div class="col-lg-5">
+						<div class="risk">リスク</div>
+						<div class="merit_demerit_box">
+							<%= a.merit %>
+						</div>
+					</div>
+					<div class="col-lg-5">
+						<div class="return">リターン</div>
+						<div class="merit_demerit_box">
+							<%= a.demerit %>
+						</div>
+					</div>	
+				<% end %>
+			</div>
+			<hr>
+		</div>
+		<div class="col-lg-2">
+			<div style="text-align: center;">販売会社</div>
+			<hr>
+			<div class="row">
+				<% @all_stores.each do |s| %>
+					<div class="col-lg-6">
+						<%= s.store_name %>
+					</div>
+				<% end %>
+			</div>
+		</div>
+	</div>
 </div>

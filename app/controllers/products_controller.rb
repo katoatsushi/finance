@@ -17,6 +17,8 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
     @advises = @product.advises
     @stores = @product.stores
+    @products = Product.all
+    @all_stores = Store.all
 
   end
 

@@ -1,0 +1,11 @@
+.product_title_box{
+	border-bottom: inset 2px black;
+}
+
+.user_name{
+	margin-top: 1.3em;
+	font-size: 1.2em;
+	font-weight: 700;
+	color: grey;
+	width: 200px;
+}
