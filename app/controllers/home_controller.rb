@@ -7,6 +7,11 @@ class HomeController < ApplicationController
 
     @searched_product = Product.ransack(params[:q])
 
+    if Advise.count < 10
+      @advises = Advise.all
+    else
+      @advises = Advise.first(9)
+    end
   	# if Product.all.count >= 8
   	# 	@products = Product.first(8)
   	# else
@@ -36,6 +41,4 @@ class HomeController < ApplicationController
     @searched_products = Product.where("product_name LIKE ?", "%#{val}%")
 
   end
-
-  
 end

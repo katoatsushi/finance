@@ -15,6 +15,8 @@ Rails.application.routes.draw do
    		resources :products 
    end
 
+  resources :products 
+
   resources :products , only: [:create ,:new, :show ] do
     resources :advises, only: [:new,:create,:edit,:update, :show,:destroy]
   end

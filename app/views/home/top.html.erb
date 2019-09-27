@@ -1,5 +1,4 @@
 <%= image_tag '/header.png', width: "100%" %>
-
 <div class="flexiblebox search_main_box">
 	<div class="search_title">商品名または販売店名で探す</div>
 	<div class="search_input_box">
@@ -10,21 +9,24 @@
 		<% end %>
 	</div>
 </div>
-
 <%= link_to '販売店追加', new_store_path,  class: "btn btn-primary"%>
 <%= link_to '商品追加', new_product_path,  class: "btn btn-primary"%>
-
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-xs-6 col-lg-9">
 			<p>新着コメント</p>
 			<div class="row">
-				<% @products.each do |p| %>
-				<div class="col-lg-4 col-xs-12 advise_card">
-					<div class="card_inner">
-						<%= p.product_name %>
+				<% @advises.each do |a| %>
+					<div class="col-lg-4 col-xs-12 ">
+						<div class="card_inner">
+							<p style="font-weight: 900; text-align:center ;">リスク</p>
+							<div><%= a.merit.truncate(24) %></div>
+							<p style="font-weight: 900; text-align:center ;">リターン</p>
+							<div><%= a.demerit.truncate(24) %></div>
+							<div><%= a.product.product_name %></div>
+							<%= link_to "詳細へ", product_path(id: a.product_id) ,class: "btn btn-info" %>
+						</div>
 					</div>
-				</div>
 				<% end %>
 			</div>
 		</div>
