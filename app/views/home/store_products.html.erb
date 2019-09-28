@@ -1,0 +1,19 @@
+<div class="w_store_list">販売会社一覧</div>
+
+<div class="container store_product_font">
+<% @stores.each do |s| %>
+	
+	<div style="text-align: center">
+		<%= s.store_name %>
+		<p>取扱商品一覧</p>
+	</div>
+	<hr>
+	<div class="row" style="padding-bottom: 30px;">
+		<% s.products.each do |p|  %>
+			<div class="col-lg-6 col-xs-12">
+				・<%= link_to "p.product_name", product_path(p.id) , class: "w_product_name"%>
+			</div>
+		<% end %>
+	</div>
+<% end %>
+</div>

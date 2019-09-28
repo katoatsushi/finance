@@ -50,6 +50,12 @@ Product.create(product_name: "中国人民元ソブリンオープン")
 Product.create(product_name: "北米リート・セレクトファンド　Ｂコース（定額目標分配型／為替ヘッジなし）")
 Product.create(product_name: "三井住友・中小型株ファンド")
 
+
+Product.all.each do |p|
+	StoreProduct.create(store_id: 1, product_id: p.id)
+end
+
+
 5.times do |i|
 Advise.create(merit: "#{i}あああああああああああああああああああああああああああああ
 	あああああああああああああああああああああああああああああああああああああ",

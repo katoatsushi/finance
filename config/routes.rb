@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   :sessions => 'users/sessions'   
 } 
 
-
+  get 'home/store_products'
   get 'home/index'
   root 'home#top'
   resources :stores 

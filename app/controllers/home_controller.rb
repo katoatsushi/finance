@@ -41,4 +41,8 @@ class HomeController < ApplicationController
     @searched_products = Product.where("product_name LIKE ?", "%#{val}%")
 
   end
+
+  def store_products
+    @stores = Store.all
+  end
 end

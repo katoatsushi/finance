@@ -35,7 +35,8 @@
 			<div class="row">
 				<% @stores.each do |s| %>
 				<div class="col-xs-6 col-md-6 center">
-					<%= s.store_name %>
+					<%= link_to "#{s.store_name}",home_store_products_path, class: "center"  %>
+					<%#= s.store_name %>
 				</div>
 				<% end %>
 			</div>
