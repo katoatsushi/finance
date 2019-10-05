@@ -5,7 +5,7 @@
 <%= image_tag '/header.png', width: "100%" %>
 <div  class="little_padding"></div>
 <div class="flexiblebox search_main_box">
-	<div class="search_title">商品名または販売店名で探す</div>
+	<div class="search_title">商品名で探す</div>
 	<div class="search_input_box">
 		<%= form_tag(home_searched_products_path, method: :get ,style: "display: inline;") do%>
 			<%= text_field_tag :search_product,'', size: 80 , placeholder: '例）〇〇ファンド' %>
