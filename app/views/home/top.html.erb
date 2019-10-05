@@ -1,4 +1,9 @@
+<% if admin_signed_in? %>
+<%= link_to "ログアウトする", destroy_admin_session_path, method: :delete, class: "btn btn-primary btn-block" %>
+<% end %>
+
 <%= image_tag '/header.png', width: "100%" %>
+<div  class="little_padding"></div>
 <div class="flexiblebox search_main_box">
 	<div class="search_title">商品名または販売店名で探す</div>
 	<div class="search_input_box">
@@ -9,22 +14,27 @@
 		<% end %>
 	</div>
 </div>
-<%= link_to '販売店追加', new_store_path,  class: "btn btn-primary"%>
-<%= link_to '商品追加', new_product_path,  class: "btn btn-primary"%>
+<div  class="little_padding"></div>
+
+<% if admin_signed_in? %>
+	<%= link_to '販売店追加', new_store_path,  class: "btn btn-primary"%>
+	<%= link_to '商品追加', new_product_path,  class: "btn btn-primary"%>
+<% end %>
+
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-xs-6 col-lg-9">
-			<p>新着コメント</p>
+			<p style="font-size: 1.3em; font-weight: 800;">新着コメント</p>
 			<div class="row">
 				<% @advises.each do |a| %>
 					<div class="col-lg-4 col-xs-12 ">
 						<div class="card_inner">
+							<div class="card_advise_product_name"><%= a.product.product_name %></div>
 							<p style="font-weight: 900; text-align:center ;">リスク</p>
 							<div class="risk_return_text_box"><%= a.merit.truncate(50) %></div>
 							<p style="font-weight: 900; text-align:center ;">リターン</p>
 							<div class="risk_return_text_box"><%= a.demerit.truncate(50) %></div>
-							<div><%= a.product.product_name %></div>
-							<%= link_to "詳細へ", product_path(id: a.product_id) ,class: "btn btn-info btn-block" %>
+							<%= link_to "詳細へ", product_path(id: a.product_id) ,class: "btn btn-info btn-lg" %>
 						</div>
 					</div>
 				<% end %>

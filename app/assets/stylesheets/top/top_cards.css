@@ -26,3 +26,11 @@
 	padding-right: 8px;
 	height: auto;
 }
+
+.card_advise_product_name{
+	font-weight: 900; 
+	text-align: center;
+	background-color: #DDDDDD;
+	padding: 5px;
+	margin-bottom: 10px;
+}

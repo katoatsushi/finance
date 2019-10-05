@@ -6,10 +6,12 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Admin.create(email: "admin@gmail.com", password: "password")
+
 Store.create(store_name: "野村證券", country: "日本")
 Store.create(store_name: "大和證券", country: "日本")
 Store.create(store_name: "SMBC日興証券", country: "日本")
-Store.create(store_name: "三菱モルガン", country: "日本")
+Store.create(store_name: "三菱モルガン", country: "日経２２５インデックス本")
 Store.create(store_name: "みずほ銀行", country: "日本")
 Store.create(store_name: "岡三証券", country: "日本")
 

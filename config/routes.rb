@@ -1,10 +1,16 @@
 Rails.application.routes.draw do
 
+  # devise_for :admins
   # devise_for :users
   devise_for :users, :controllers => {
-  :registrations => 'users/registrations',
-  :sessions => 'users/sessions'   
-} 
+    :registrations => 'users/registrations',
+    :sessions => 'users/sessions'   
+  } 
+
+  devise_for :admins, :controllers => {
+    :registrations => 'admins/registrations',
+    :sessions => 'admins/sessions'   
+  } 
 
   get 'home/store_products'
   get 'home/index'
