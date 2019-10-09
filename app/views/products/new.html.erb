@@ -12,6 +12,13 @@
 	<div><h2>商品名</h2></div>
 	40文字以内にしてください
 	<%= f.text_field :product_name, placeholder: "  商品名", :size => "80%" %>
+
+	<div><h2>商品の詳細リンク</h2></div>
+	<%= f.text_area :product_detail_url, :size => "80%" %>
+
+	<div><h2>関連リンク&サイト名</h2></div>
+	<%= f.text_field :product_detail_name, :size => "80%" %>
+
 	<%=f.submit '送信！', class: 'btn btn-primary btn-lg btn-block' %>
 
 <%end%>

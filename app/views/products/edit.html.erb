@@ -1,2 +1,25 @@
-<h1>Products#edit</h1>
-<p>Find me in app/views/products/edit.html.erb</p>
+<%= form_for @product, url: edit_product_path(@product.id), method: :post do |f| %>
+
+<div class="container">
+
+    <h2>販売会社名</h2>
+    <div class="row">
+	    <%= collection_check_boxes(:product, :store_ids, Store.all, :id, :store_name) do |b| %>
+	      <div style="background-color: #BBBBBB;"><%= b.label { b.check_box +  b.text } %></div><hr>
+	    <% end %>
+	</div>
+
+	<div><h2>商品名</h2></div>
+	40文字以内にしてください
+	<%= f.text_field :product_name, placeholder: "  商品名", :size => "80%" %>
+
+	<div><h2>商品の詳細リンク</h2></div>
+	<%= f.text_area :product_detail_url, :size => "80%" %>
+
+	<div><h2>関連リンク&サイト名</h2></div>
+	<%= f.text_field :product_detail_name, :size => "80%" %>
+
+	<%=f.submit '送信！', class: 'btn btn-primary btn-lg btn-block' %>
+
+<%end%>
+

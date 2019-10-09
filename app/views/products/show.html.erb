@@ -6,8 +6,13 @@
 			<div class="product_name_box"><%= @product.product_name %></div>
 			<div class="product_link">
 				詳細はこちら<br>
-				<%#= @product.product_url %><br>
-				関連リンク<br>
+				<%= @product.product_detail_url %><br>
+
+				<% if @product.product_detail_name != nil %>
+					関連リンク<br>
+					<%= @product.product_detail_name %><br>
+				<% end %>
+				
 			</div>
 			<hr>
 			<div class="product_store_list">
